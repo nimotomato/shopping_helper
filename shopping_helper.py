@@ -126,7 +126,7 @@ def main():
     while True:
         try:
             while True:
-                choice = input("What item would you like to see recipes of?")
+                choice = input("What item would you like to see recipes of? ")
                 print("")
                 for i in Recipes.driver(choice):
                     print(i)
