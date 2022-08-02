@@ -18,10 +18,10 @@ class Ica:
         return soup_getter("https://www.ica.se/butiker/maxi/malmo/maxi-ica-stormarknad-malmo-2748/erbjudanden/")
 
 
-    def get_deals(url):
+    def get_deals(soup):
         """gets all deals"""
         list = ["ICA"]
-        for row in url.find_all(class_="offer-type__product-details"):
+        for row in soup.find_all(class_="offer-type__product-details"):
             deals = row.h2.text
             list.append(deals.strip())
         return list
@@ -38,10 +38,10 @@ class Lidl:
         return soup_getter("https://www.lidl.se/c/mandag-sondag/c4048/w1")
 
        
-    def get_deals(url):
+    def get_deals(soup):
         """gets all basic deals"""
         list = ["LIDL"]
-        for row in url.find_all("h3", class_="ret-o-card__headline"):
+        for row in soup.find_all("h3", class_="ret-o-card__headline"):
             list.append(row.text.strip())
         return list
 
