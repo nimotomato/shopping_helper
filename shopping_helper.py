@@ -4,9 +4,8 @@ import re
 import sys
 #A program intended to find items on sales in stores I frequent and then search using the item.
 
-def soup_getter(n):
+def soup_getter(url):
     """Global function, gets soup"""
-    url = n
     r = requests.get(url)
     soup = BeautifulSoup(r.content, "html5lib")
     return soup
