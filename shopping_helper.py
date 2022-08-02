@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import sys
-#A program intended to find deals in stores I frequent and then search for recipes I want to cook.
+#A program intended to find items on sales in stores I frequent and then search using the item.
 
 def soup_getter(n):
     """Global function, gets soup"""
