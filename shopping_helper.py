@@ -131,8 +131,10 @@ def main():
                 for i in Recipes.driver(choice):
                     print(i)
         except ValueError:
+            print("No recipe found.")
             continue
         except TypeError:
+            print("No recipe found.")
             continue
         except EOFError:
             sys.exit("Thank you for browsing!")
